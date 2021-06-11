@@ -1,0 +1,12 @@
+.container-forecast {
+    border: solid 1px lightgray;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.container-map {
+    border: solid 1px lightgray;
+    width: 800px;
+    height: 600px;
+}
