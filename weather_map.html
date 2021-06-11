@@ -3,12 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>$Title$</title>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' /><link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
         <script src="jquery/jquery-2.2.4.js"></script>
-        <script src="bootstrap-5.0.1-dist/js/bootstrap.js"></script>
+        <script src="bootstrap-4.5.3-dist/js/bootstrap.bundle.js"></script>
+        <link rel="stylesheet" href="css/weather_map.css">
+
+
     </head>
     <body>
         $END$
+
+        <div id="forecast-container" class=" container container-forecast">
+            this is were you will see the 5 day forecast.
+        </div>
+        <div id="map" class="container container-map">
+            this is were you will see the map forecast
+        </div>
+
+
+
         <script src="jquery/jquery-2.2.4.js"></script>
-        <script src="bootstrap-5.0.1-dist/js/bootstrap.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+        <script src="bootstrap-4.5.3-dist/js/bootstrap.bundle.js"></script>
+        <script src="js/keys.js"></script>
+        <script src="js/dom-weather-loader.js"></script>
+        <script src="js/mapbox-utils.js"></script>
+        <script src="js/weathermap-utils.js"></script>
     </body>
 </html>
