@@ -20,6 +20,7 @@ function activatingMap() {
 
 }
 
+
 function gettingTheMap() {
     return new mapboxgl.Map({
         container: 'map',
@@ -28,6 +29,7 @@ function gettingTheMap() {
         zoom: 12
     })
 }
+
 
 
 // .2 Create the geocoder and add it how you see fit
@@ -39,14 +41,15 @@ function settingUpTheGeocoder() {
         marker: false
     })
 }
+// settingUpTheGeocoder(geocoder)
 
-function addGeocoderEvent(geocoder) {
+function addingTheGeocoderEvent(geocoder) {
     geocoder.on("result", function (event) {
         console.log(event);
         marker.setLngLat(event.result.geometry.coordinates)
     })
 }
-addGeocoderEvent(geocoder);
+addingTheGeocoderEvent(geocoder);
 
 
 function addingTheGeocoderToMap(geocoder){
@@ -63,20 +66,20 @@ let marker = new mapboxgl.Marker()
 settingUpTheGeocoder(marker)
 console.log(marker);
 
+let point;
 function settingUpMarker() {
-    return new marker.setLngLat([-98.4936, 29.4241]).addTo(map)
-    // return new mapboxgl.Marker().setLngLat(point).addTo(map);
+    // return new marker.setLngLat([-98.4936, 29.4241]).addTo(map)
+    return new mapboxgl.Marker().setLngLat(point).addTo(map);
 }
 
 settingUpMarker(marker)
 
 function addingMapEvent(marker) {
     map.on('click', function (event) {
-        console.log(event.lngLat)
+        // console.log(event.lngLat)
         marker.setLngLat(event.lngLat).addTo(map);
     })
 }
-
 addingMapEvent(marker);
 
 // popup
@@ -85,12 +88,13 @@ function setPopup(text){
 
     marker.setPopup(popup)
 }
+setPopup("Testing");
 
 
 function getPopup(){
     return new mapboxgl.Popup()
 }
-
+getPopup(marker)
 // .4 Create the reverseGeocode() function that will get the location data of a set of coordinates
 
 // *** You don't need a reverseGeocode. However, if you feel like you wanna play with it add it after you're done with the functionality *** \\
