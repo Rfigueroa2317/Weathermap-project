@@ -16,10 +16,10 @@ console.log(map);
 
 function activatingMap() {
     mapboxgl.accessToken = MAPBOX_TOKEN;
-    map = '/this is a placeholder for now. will Change later/';
+    map = gettingTheMap();
 
 }
-
+console.log(map)
 
 function gettingTheMap() {
     return new mapboxgl.Map({
@@ -29,8 +29,6 @@ function gettingTheMap() {
         zoom: 12
     })
 }
-
-
 
 // .2 Create the geocoder and add it how you see fit
 
@@ -66,13 +64,12 @@ let marker = new mapboxgl.Marker()
 settingUpTheGeocoder(marker)
 console.log(marker);
 
-let point;
-function settingUpMarker() {
-    // return new marker.setLngLat([-98.4936, 29.4241]).addTo(map)
-    return new mapboxgl.Marker().setLngLat(point).addTo(map);
-}
 
-settingUpMarker(marker)
+// function settingUpMarker() {
+//     // return new marker.setLngLat([-98.4936, 29.4241]).addTo(map)
+//     return new mapboxgl.Marker().setLngLat(point).addTo(map);
+// }
+
 
 function addingMapEvent(marker) {
     map.on('click', function (event) {
@@ -80,15 +77,15 @@ function addingMapEvent(marker) {
         marker.setLngLat(event.lngLat).addTo(map);
     })
 }
+
 addingMapEvent(marker);
 
-// popup
-function setPopup(text){
-    let popup = new mapboxgl.Popup().setHTML(`<p>${text}</p>`).addTo(map)
 
+function setPopup(text){
+    let popup = new mapboxgl.Popup().setLngLat([0,0]).setHTML(`<p>${text}</p>`).addTo(map)
     marker.setPopup(popup)
 }
-setPopup("Testing");
+setPopup("Here's a place");
 
 
 function getPopup(){
@@ -109,3 +106,4 @@ function getReverseGeocode(point, marker){
 }
 
 // .5 Create the callback to be used to pass coordinates along to weathermap-utils.js when the response from geocoder endpoint is SUCCESSFUL
+
