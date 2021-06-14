@@ -17,3 +17,4 @@ function getAjaxRequest(lat,lon){
 }
 getAjaxRequest(29.4241,-98.4936);
 // .2 on success, massage the data to your liking, bundle it up as an object, and pass along to dom-weather-loader.js
+

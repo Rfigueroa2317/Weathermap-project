@@ -42,3 +42,14 @@
 //     `
 //     details.innerHTML = html;
 // }
+
+
+function atmosphereMap(){
+    $.ajax({
+        url:`http://maps.openweathermap.org/maps/2.0/weather/PA0/{z}/{x}/{y}?date=1527811200&appid={API key}`,
+        type: "GET",
+        data: {
+            APPID: OPEN_WEATHERMAP_TOKEN,
+        }
+    })
+}
