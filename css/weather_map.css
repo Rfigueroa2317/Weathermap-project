@@ -1,8 +1,55 @@
-.container-forecast {
-    border: solid 1px lightgray;
-    padding: 10px;
-    margin: 10px;
+#header {
+    display: flex;
+    justify-content: center;
+}
 
+.container-page{
+    border: solid lightgray;
+
+}
+.container-title-forecast {
+    border: solid 1px lightgray;
+}
+
+
+.container-forecast {
+    display: flex;
+    justify-content: space-around;
+}
+
+.day-one {
+    border: solid 1px lightgray;
+    padding: 5em;
+    margin: 5em;
+    width: 10%;
+}
+
+.day-two {
+    border: solid 1px lightgray;
+    padding: 5em;
+    margin: 5em;
+    width: 10%;
+}
+
+.day-three {
+    border: solid 1px lightgray;
+    padding: 5em;
+    margin: 5em;
+    width: 10%;
+}
+
+.day-four {
+    border: solid 1px lightgray;
+    padding: 5em;
+    margin: 5em;
+    width: 10%;
+}
+
+.day-five {
+    border: solid 1px lightgray;
+    padding: 5em;
+    margin: 5em;
+    width: 10%;
 }
 
 .container-map {
