@@ -2,28 +2,82 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>$Title$</title>
-        <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' /><link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
-        <script src="jquery/jquery-2.2.4.js"></script>
-        <script src="bootstrap-4.5.3-dist/js/bootstrap.bundle.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet"/>
+        <link rel="stylesheet"
+              href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+              type="text/css">
         <link rel="stylesheet" href="css/weather_map.css">
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
 
     </head>
     <body>
-        $WEATHER MAP$
-
-        <div id="forecast-container" class=" container container-forecast">
-            this is were you will see the 5 day forecast.
-        </div>
-        <div id="map" class="container container-map">
-            this is were you will see the map forecast
-        </div>
-
-
+        <section>
+            <div id="header" class="container header">
+                <h3>WEATHER APP</h3>
+            </div>
+            <div>
+                <form type="text" name="location">
+                    <button type="submit"></button>
+                </form>
+            </div>
+            <div id="weather-page" class="container container-page">
+                <div id="forecast-title-container" class=" container container-title-forecast">
+                    this is were you will see the 5 day forecast.
+                </div>
+                <div id="five-day-forecast" class="container container-forecast">
+                    <div id="day-one" class="container day-one col-sm-2.4">
+                        day one
+                        <p>temperature</p>
+                        <p>weather icon</p>
+                        <p>description</p>
+                        <p>humidity</p>
+                        <p>pressure</p>
+                    </div>
+                    <div id="day-two" class="container day-two col-sm-2.4">
+                        day two
+                        <p>temperature</p>
+                        <p>weather icon</p>
+                        <p>description</p>
+                        <p>humidity</p>
+                        <p>pressure</p>
+                    </div>
+                    <div id="day-three" class="container day-three col-sm-2.4">
+                        day three
+                        <p>temperature</p>
+                        <p>weather icon</p>
+                        <p>description</p>
+                        <p>humidity</p>
+                        <p>pressure</p>
+                    </div>
+                    <div id="day-four" class="container day-four col-sm-2.4">
+                        day four
+                        <p>temperature</p>
+                        <p>weather icon</p>
+                        <p>description</p>
+                        <p>humidity</p>
+                        <p>pressure</p>
+                    </div>
+                    <div id="day-five" class="container day-five col-sm-2.4">
+                        day five
+                        <p>temperature</p>
+                        <p>weather icon</p>
+                        <p>description</p>
+                        <p>humidity</p>
+                        <p>pressure</p>
+                    </div>
+                </div>
+                <div id="map" class="container container-map col-lg-9">
+                    this is were you will see the map forecast
+                </div>
+            </div>
+        </section>
 
         <script src="jquery/jquery-2.2.4.js"></script>
-        <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
         <script src="bootstrap-4.5.3-dist/js/bootstrap.bundle.js"></script>
         <script src="js/keys.js"></script>
