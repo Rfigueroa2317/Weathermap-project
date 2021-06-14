@@ -27,18 +27,27 @@
 // document.getElementById("day-one").innerHTML
 // console.log(document.getElementById("day-one"))
 
+function addDataToPage(weatherArray){
+    weatherArray.forEach(function (obj){
+        $("#forecast-title-container").append(appendWeatherData(obj))
+    })
+}
 
-// function generateHTML(data){
-//     let html = `
-// <div id="five-day-forecast" className="container container-forecast col-lg-12">${data.current.temperature}</div>
-//    <div id="day-one" className="container day-one col-sm-2.2 col-md-2.4 col-lg-2.4">${data.current.weather_descriptions.map(item => item).join('')}</div>
-//     <p>day one</p>
-//     <p>temperature- ${data.current.temperature}</p>
-//     <p>weather icon</p>
-//     <p>description</p>
-//     <p>humidity- ${data.current.humidy}</p>
-//     <p>pressure</p>
-//     </div>
-//     `
-//     details.innerHTML = html;
-// }
+function appendWeatherData(weatherData) {
+   let forecastContainer = $(` <div id="five-day-forecast" class="container container-forecast">
+                </div>`)
+
+    forecastContainer.append(`<div id="day-two" class="dflex container day-two">
+                       <p>day two</p>
+                        <p>temperature: ${weatherData.temp}</p>
+                        <p>weather icon: ${weatherData.icon}</p>
+                        <p>description: ${weatherData.description}</p>
+                        <p>${weatherData.humidity}</p>
+                        <p>pressure: ${weatherData.pressure}</p>
+                        <p>clouds: ${weatherData.temp}</p>
+                        <img class="icon0" src="images/${weatherData.icon}.png">
+                    </div>`)
+    return forecastContainer
+}
+
+// >
