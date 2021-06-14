@@ -12,12 +12,10 @@ var map = new mapboxgl.Map({
     center: [-98.4936, 29.4241],
     zoom: 13
 })
-console.log(map);
 
 function activatingMap() {
     mapboxgl.accessToken = MAPBOX_TOKEN;
     map = gettingTheMap();
-
 }
 console.log(map)
 
