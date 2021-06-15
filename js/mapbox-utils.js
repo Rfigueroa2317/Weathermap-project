@@ -72,7 +72,8 @@ console.log(marker);
 function addingMapEvent(marker) {
     map.on('click', function (event) {
         // console.log(event.lngLat)
-        marker.setLngLat(event.lngLat).addTo(map);
+        // marker.setLngLat(event.lngLat).addTo(map);
+        getAjaxRequest(event.lngLat.lat, event.lngLat.lng)
     })
 }
 
@@ -98,7 +99,7 @@ function getReverseGeocode(point, marker){
     $.ajax({
         url: `https://api.mapbox.com/geocoding/v5/mapbox.places/${point}.json?access_token=${mapboxgl.accessToken}`,
         success: function(data){
-            marker.setPopup(getPopup(data.features[0].place_name)).togglePopup();
+
         }
     })
 }

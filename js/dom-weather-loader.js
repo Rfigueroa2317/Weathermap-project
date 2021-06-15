@@ -37,12 +37,11 @@ function appendWeatherData(weatherData) {
    let forecastContainer = $(` <div id="five-day-forecast" class="container container-forecast">
                 </div>`)
 
-    forecastContainer.append(`<div id="day-two" class="dflex container day-two">
-                       <p>day two</p>
+    forecastContainer.append(`<div id="day-two" class="container day-two">
+                       <p></p>
                         <p>temperature: ${weatherData.temp}</p>
-                        <p>weather icon: ${weatherData.icon}</p>
                         <p>description: ${weatherData.description}</p>
-                        <p>${weatherData.humidity}</p>
+                        <p>humidity: ${weatherData.humidity}</p>
                         <p>pressure: ${weatherData.pressure}</p>
                         <p>clouds: ${weatherData.temp}</p>
                         <img class="icon0" src="images/${weatherData.icon}.png">

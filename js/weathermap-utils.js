@@ -30,6 +30,7 @@ function pullingData(data){
                 wind: data.list[i].main.wind,
                 clouds: data.list[i].main.clouds,
                 visibility: data.list[i].main.visibility,
+                description: data.list[i].main.description,
                 icon: data.list[i].weather[0].icon,
             })
         }
